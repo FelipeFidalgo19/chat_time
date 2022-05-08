@@ -2,7 +2,7 @@
 
 const localhost = 'http://localhost:5000/cadastro.html';
 const web = 'https://chatapsunip.herokuapp.com'
-var socket = io(localhost || web);
+var socket = io( web);
 
 $(document).ready(function(){
     var query = location.search.slice(1);
