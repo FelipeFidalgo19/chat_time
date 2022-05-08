@@ -16,6 +16,30 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="./js/cadastro.js"></script>
+
+   
+    <div class="container">
+
+        <form action="" method="post" class="form" name="cadastro1">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo" />
+            </div>
+
+            <input type="text" placeholder="Usuário" name="username" class="username" />
+            <input type="email" placeholder="E-mail" name="email" class="email" />
+            <input type="password" placeholder="Senha" name="password" class="password" />
+            <input type="password" placeholder="Confirme sua senha" name="confirmPassword" class="confirmPassword" />
+            <button type="submit" onclick="postRegister()">Criar usuário</button>
+
+            <span>
+                <p>Você já tem uma conta? <a href="./index.html">Logue aqui</a></p>
+            </span>
+            <h3 class="text">
+                <p class="p"></p>
+            </h3>
+        </form>
+
+    </div>
     <script type="text/javascript">
 
         function postRegister() {
@@ -28,7 +52,7 @@
             const web = 'https://chatapsunip.herokuapp.com/cadastro.html';
 
             const timeShowmessage = () => {
-                if (showMessage() == true) {
+                if (showMessage == true) {
                     axios.post(localhost, {
                         name: name,
                         email: email,
@@ -82,29 +106,6 @@
 
         }
     </script>
-    <div class="container">
-
-        <form action="" method="post" class="form" name="cadastro1">
-            <div class="logo">
-                <img src="./img/logo.png" alt="logo" />
-            </div>
-
-            <input type="text" placeholder="Usuário" name="username" class="username" />
-            <input type="email" placeholder="E-mail" name="email" class="email" />
-            <input type="password" placeholder="Senha" name="password" class="password" />
-            <input type="password" placeholder="Confirme sua senha" name="confirmPassword" class="confirmPassword" />
-            <button type="submit" onclick="postRegister()">Criar usuário</button>
-
-            <span>
-                <p>Você já tem uma conta? <a href="./index.html">Logue aqui</a></p>
-            </span>
-            <h3 class="text">
-                <p class="p"></p>
-            </h3>
-        </form>
-
-    </div>
-
 </body>
 
 </html>
