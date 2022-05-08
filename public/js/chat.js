@@ -1,7 +1,7 @@
 (function(){
 
 
-var socket = io('http://localhost:3000');
+var socket = io('http://localhost:5000');
 
 $(document).ready(function(){
     var query = location.search.slice(1);

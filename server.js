@@ -53,7 +53,7 @@ io.on('connection', socket => {
     });
 });
 
-const port = 3000 || config.httpPort;
+const port = 5000;
 //const host = '192.168.0.31';
 
 server.listen(port, () => {
