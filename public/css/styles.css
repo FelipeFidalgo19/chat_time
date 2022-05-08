@@ -15,6 +15,14 @@ html, body {
     display: flex;
     justify-content: center;
   }
+
+  .container .menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
   .file-input, .files-list{
     margin: 5px;
   }
