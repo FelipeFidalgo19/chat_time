@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(rotas);
 const cors = require('cors');
 const { application } = require('express');
+const { config } = require('dotenv');
 app.use(cors());
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -52,7 +53,7 @@ io.on('connection', socket => {
     });
 });
 
-const port = 3000;
+const port = 3000 || config.httpPort;
 //const host = '192.168.0.31';
 
 server.listen(port, () => {
