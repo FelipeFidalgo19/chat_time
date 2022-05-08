@@ -2,9 +2,9 @@ module.exports = {
     test: {
         client: 'mysql',
         connection: {
-            database: 'heroku_9d83b4e78b13644',
-            user: 'b89ada163df3c0',
-            password: '53e751ad',
+            database: 'heroku_fc9f2aeda300078',
+            user: 'b4ca38b7b81a43',
+            password: '3ad2c379',
             host: 'us-cdbr-east-05.cleardb.net'
         },
         pool: {
@@ -19,9 +19,9 @@ module.exports = {
     development: {
         client: 'mysql',
         connection: {
-            database: 'heroku_9d83b4e78b13644',
-            user: 'b89ada163df3c0',
-            password: '53e751ad',
+            database: 'heroku_fc9f2aeda300078',
+            user: 'b4ca38b7b81a43',
+            password: '3ad2c379',
             host: 'us-cdbr-east-05.cleardb.net'
         },
         pool: {
@@ -36,9 +36,9 @@ module.exports = {
     staging: {
         client: 'mysql',
         connection: {
-            database: 'heroku_9d83b4e78b13644',
-            user: 'b89ada163df3c0',
-            password: '53e751ad',
+            database: 'heroku_fc9f2aeda300078',
+            user: 'b4ca38b7b81a43',
+            password: '3ad2c379',
             host: 'us-cdbr-east-05.cleardb.net'
         },
         pool: {
@@ -53,9 +53,9 @@ module.exports = {
     production: {
         client: 'mysql',
         connection: {
-            database: 'heroku_9d83b4e78b13644',
-            user: 'b89ada163df3c0',
-            password: '53e751ad',
+            database: 'heroku_fc9f2aeda300078',
+            user: 'b4ca38b7b81a43',
+            password: '3ad2c379',
             host: 'us-cdbr-east-05.cleardb.net'
         },
         pool: {
