@@ -22,8 +22,9 @@
             var name = document.querySelector(".username").value;
             var email = document.querySelector(".email").value;
             var senha = document.querySelector(".password").value;
-
-            axios.post('http://localhost:3000/cadastro.html', {
+            
+            //http://localhost:3000/cadastro.html
+            axios.post('https://chatapsunip.herokuapp.com/cadastro.html', {
                 name: name,
                 email: email,
                 senha: senha
