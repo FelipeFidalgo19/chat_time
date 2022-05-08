@@ -1,7 +1,7 @@
 (function(){
 
 const localhost = 'http://localhost:5000/cadastro.html';
-const web = 'https://chatapsunip.herokuapp.com/cadastro.html'
+const web = 'https://chatapsunip.herokuapp.com'
 var socket = io(localhost || web);
 
 $(document).ready(function(){
