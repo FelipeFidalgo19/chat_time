@@ -16,8 +16,32 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="./js/cadastro.js"></script>
+    <script type="text/javascript">
 
-   
+        function postRegister() {
+            var name = document.querySelector(".username").value;
+            var email = document.querySelector(".email").value;
+            var senha = document.querySelector(".password").value;
+            
+            const localhost = 'http://localhost:5000/cadastro.html';
+            const web = 'https://chatapsunip.herokuapp.com/cadastro.html'
+             
+            axios.post(web, {
+                name: name,
+                email: email,
+                senha: senha
+            })
+                .then(function (response) {
+                    window.location.href = './index.html';
+                })
+                .catch(function (error) {
+                    exibeMensagem('Erro ao cadastrar');
+                })
+                .then(function () {
+                    // always executed
+                });
+        }
+    </script>
     <div class="container">
 
         <form action="" method="post" class="form" name="cadastro1">
@@ -40,72 +64,7 @@
         </form>
 
     </div>
-    <script type="text/javascript">
 
-        function postRegister() {
-            var name = document.querySelector(".username").value;
-            var email = document.querySelector(".email").value;
-            var confirmaSenha = document.querySelector(".confirmPassword").value;
-            var senha = document.querySelector(".password").value;
-
-            const localhost = 'http://localhost:5000/cadastro.html';
-            const web = 'https://chatapsunip.herokuapp.com/cadastro.html';
-
-            const timeShowmessage = () => {
-                if (showMessage == true) {
-                    axios.post(localhost, {
-                        name: name,
-                        email: email,
-                        senha: senha
-                    })
-                        .then(function (response) {
-                            window.location.href = './index.html';
-                        })
-                        .catch(function (error) {
-                            exibeMensagem('Erro ao cadastrar');
-                        })
-                        .then(function () {
-                            // always executed
-                        });
-                } else {
-                    let timeout;
-                    showMessage();
-                    timeout = setTimeout(clearMessage, 3000);
-
-                }
-            }
-            const showMessage = () => {
-                let message;
-                if (senha !== confirmaSenha) {
-                    message = "Senha e confirmação de senha deve ser as mesmas";
-                    p.innerHTML = message;
-                    text.appendChild(p);
-                    return false;
-
-                } else if (name.length < 3) {
-                    message = "Usuário deve ser maior do que 3 caracteres";
-                    p.innerHTML = message;
-                    text.appendChild(p);
-                    return false;
-
-                } else if (senha.length < 8) {
-                    message = "Senha deve ser igual ou maior do que 8 caracteres";
-                    p.innerHTML = message;
-                    text.appendChild(p);
-                    return false;
-
-                } else if (email.value === "") {
-                    message = "Email é requerido";
-                    p.innerHTML = message;
-                    text.appendChild(p);
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-
-        }
-    </script>
 </body>
 
 </html>
