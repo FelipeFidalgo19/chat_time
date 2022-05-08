@@ -24,14 +24,14 @@
             var senha = document.querySelector(".password").value;
 
 
-            axios.post('https://chatapsunip.herokuapp.com', {
+            axios.post('https://chatapsunip.herokuapp.com/login', {
                 email: email,
                 senha: senha
             })
-                .then(function (response) {
+            .then(function (response) {
                     if (response.status == 200) {
                         userLogged = response.data[0].name;
-                        window.location.href = './chat.html';
+                        window.location.href = `./chat.html?name=${response.data[0].name}`;
                     }
                 })
                 .catch(function (error) {
