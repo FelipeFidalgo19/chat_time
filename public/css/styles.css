@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap%27');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #2c2c2c;
+  }
+  .container {
+    height: 885px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  .file-input, .files-list{
+    margin: 5px;
+  }
+  .menu {    
+    margin-top:-20%;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    width: 200px;
+    height: 500px;
+    margin: 5px 8px 0 0;
+    font-size: 14px;
+  }
+  .menu input[type="text"] {
+    width: 180px;
+    margin: 15px 0 0 8px;
+    border: 1px solid #4a4a4a;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  .menu input[type="file"] {
+    margin-top: 10px;
+    max-width: 160px;
+    display: none;
+  }
+  .menu label{
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 99%;
+    background-color: rgb(199, 199, 199);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .menu label:hover{
+    transition: 0.2s;
+    background-color: rgb(165, 165, 165);
+  }
+
+  .menu .author {
+    margin: 2px 0 0 5px;
+    font-weight: bold;
+  }
+  
+  #chat {
+    margin-top:-20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  form input {
+    width: 885px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 885px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #3dd46f;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    color: #FFF;
+    margin-top: 10px;
+  }
+  button:hover{
+    transition: 0.2s;
+    opacity: 0.5;
+  }
+  .messages {
+    width: 885px;
+    height: 500px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .file{
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  .message{
+    margin: 2px 0;
+  }
+  .message-author{
+    margin: 2px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    color: #000000;
+  }
+  .msg_area {
+    padding: 5px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    max-width: 250px;
+  }
+
+  .bg_author{
+    background-color: #3dd46f;
+  }
+  .bg{
+    background-color: #00dfe7;
+  }

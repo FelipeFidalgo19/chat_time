@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./js/comum.js"></script>
+    <script type="text/javascript">
+        function Login() {
+            var email = document.querySelector(".username").value;
+            var senha = document.querySelector(".password").value;
+
+
+            axios.post('http://localhost:3000/login', {
+                email: email,
+                senha: senha
+            })
+                .then(function (response) {
+                    if (response.status == 200) {
+                        userLogged = response.data[0].name;
+                        window.location.href = './chat.html';
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                })
+                .then(function () {
+                    // always executed
+                });
+        }
+    </script>
+
+    <div class="container">
+        <form action="" method="post" class="form" name="login1">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo" />
+            </div>
+
+            <input type="email" placeholder="E-mail" name="username" id="username" class="username" min="3" />
+            <input type="password" placeholder="Senha" name="password" id="password" class="password" />
+            <button type="submit" class="submit" onclick="Login()">Login</button>
+            <span>
+                <p>Não tem uma conta? <a href="./cadastro.html">Cria uma aqui.</a></p>
+            </span>
+            <h3 class="text">
+                <p class="p"></p>
+            </h3>
+        </form>
+        <script src="./js/login.js"></script>
+    </div>
+
+
+
+</body>
+
+</html>
