@@ -1,7 +1,8 @@
 (function(){
 
-
-var socket = io('http://localhost:5000');
+const localhost = 'http://localhost:5000/cadastro.html';
+const web = 'https://chatapsunip.herokuapp.com/cadastro.html'
+var socket = io(localhost || web);
 
 $(document).ready(function(){
     var query = location.search.slice(1);
