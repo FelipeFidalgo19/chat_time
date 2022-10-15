@@ -4,7 +4,7 @@ const authController = require('./../controllers/auth.js');
 
 router.post('/cadastro.html', authController.registerindex);
 
-router.get('/', (req, res) => {
+router.get('/logar', (req, res) => {
     res.render('./../public/index.html');
 });
 
@@ -17,9 +17,12 @@ router.get('/cadastro', (req, res) => {
     res.render('./../public/cadastro.html');
 });
 
-router.get('/main', (req, res) => {
+router.get('/', (req, res) => {
     res.render('./../public/chat.html');
 });
+// router.get('/main', (req, res) => {
+//     res.render('./../public/chat.html');
+// });
 
 
 

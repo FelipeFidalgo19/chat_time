@@ -2,7 +2,7 @@
 
 const localhost = 'http://localhost:5000/cadastro.html';
 const web = 'https://chatapsunip.herokuapp.com'
-var socket = io( web);
+var socket = io(localhost);
 
 $(document).ready(function(){
     var query = location.search.slice(1);
@@ -14,7 +14,7 @@ $(document).ready(function(){
         var valor = chaveValor[1];
         data[chave] = valor;
 
-        $('#username').val(data.name).attr('disabled','disabled');
+        // $('#username').val(data.name).attr('disabled','disabled');
     });
 });
 
